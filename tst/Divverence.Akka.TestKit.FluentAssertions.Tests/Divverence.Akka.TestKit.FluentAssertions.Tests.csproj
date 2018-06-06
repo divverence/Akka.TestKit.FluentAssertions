@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <!-- BUILD -->
+  <PropertyGroup>
+    <TargetFramework>net452</TargetFramework>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <!-- *SPECIFICS* -->
+  <PropertyGroup>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+  <!-- *REF FRAMEWORK* -->
+  <ItemGroup>
+  </ItemGroup>
+  <!-- *REF NUGET PACKAGES* -->
+  <ItemGroup>
+  </ItemGroup>
+  <!-- *REF PROJECTS* -->
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\Divverence.Akka.TestKit.FluentAssertions\Divverence.Akka.TestKit.FluentAssertions.csproj" />
+  </ItemGroup>
+  <!-- *EMBEDDED RESOURCES* -->
+  <ItemGroup>
+  </ItemGroup>
+  <!-- EMBED SOURCES -->
+  <ItemGroup>
+    <EmbeddedFiles Include="@(Compile)" />
+  </ItemGroup>
+</Project>
