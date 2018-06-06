@@ -3,7 +3,6 @@
   <PropertyGroup>
     <TargetFramework>net452</TargetFramework>
     <PlatformTarget>AnyCPU</PlatformTarget>
-    <IsPackable>true</IsPackable>
   </PropertyGroup>
   <!-- *SPECIFICS* -->
   <PropertyGroup>
