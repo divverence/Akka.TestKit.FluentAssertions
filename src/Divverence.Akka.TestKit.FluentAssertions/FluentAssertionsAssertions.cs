@@ -1,6 +1,7 @@
 ﻿using System;
 using Akka.TestKit;
 using FluentAssertions;
+using FluentAssertions.Execution;
 
 namespace Divverence.Akka.TestKit.FluentAssertions
 {
@@ -67,10 +68,10 @@ namespace Divverence.Akka.TestKit.FluentAssertions
         /// <param name="args">An optional object array that contains zero or more objects to format.</param>
         public void AssertEqual<T>(T expected, T actual, Func<T, T, bool> comparer, string format = "", params object[] args)
         {
-            // This does not give a good message:
-            comparer(expected, actual).Should().BeTrue(format, args);
-            // But this doesn't work at all:
-            // actual.Should().BeEquivalentTo(expected, options => options.Using<T>( x => comparer(x.Subject, expected).Should().BeTrue()).WhenTypeIs<T>(), format, args);
+            Execute.Assertion
+                .BecauseOf(format, args)
+                .ForCondition(comparer(expected, actual))
+                .FailWith($"{typeof(T).Name} was expected to be equal to `{expected}` (using a custom comparison), but was `{actual}` instead");
         }
     }
 }
