@@ -1,0 +1,40 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.15
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Divverence.Akka.TestKit.FluentAssertions", "src\Divverence.Akka.TestKit.FluentAssertions\Divverence.Akka.TestKit.FluentAssertions.csproj", "{61DD311C-699B-11E8-9C67-C69DED1FA386}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Divverence.Akka.TestKit.FluentAssertions.Tests", "tst\Divverence.Akka.TestKit.FluentAssertions.Tests\Divverence.Akka.TestKit.FluentAssertions.Tests.csproj", "{61DD311E-699B-11E8-8A8C-C69DED1FA386}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{61DD311D-699B-11E8-A15F-C69DED1FA386}"
+	ProjectSection(SolutionItems) = preProject
+		build\build.bat = build\build.bat
+		build\build.fsx = build\build.fsx
+		build\Get-NuGetCommandLine.ps1 = build\Get-NuGetCommandLine.ps1
+		build\packages.config = build\packages.config
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{61DD311F-699B-11E8-AF2A-C69DED1FA386}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{61DD311C-699B-11E8-9C67-C69DED1FA386}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61DD311C-699B-11E8-9C67-C69DED1FA386}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61DD311C-699B-11E8-9C67-C69DED1FA386}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61DD311C-699B-11E8-9C67-C69DED1FA386}.Release|Any CPU.Build.0 = Release|Any CPU
+		{61DD311E-699B-11E8-8A8C-C69DED1FA386}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61DD311E-699B-11E8-8A8C-C69DED1FA386}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61DD311E-699B-11E8-8A8C-C69DED1FA386}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61DD311E-699B-11E8-8A8C-C69DED1FA386}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{61DD311E-699B-11E8-8A8C-C69DED1FA386} = {61DD311F-699B-11E8-AF2A-C69DED1FA386}
+	EndGlobalSection
+EndGlobal
