@@ -53,7 +53,7 @@ namespace Divverence.Akka.TestKit.FluentAssertions
         /// <param name="args">An optional object array that contains zero or more objects to format.</param>
         public void AssertEqual<T>(T expected, T actual, string format = "", params object[] args)
         {
-            actual.Should().Be(actual, format, args);
+            actual.Should().Be(expected, format, args);
         }
 
         /// <summary>
