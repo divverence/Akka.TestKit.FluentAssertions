@@ -14,35 +14,35 @@ namespace Divverence.Akka.TestKit.FluentAssertions.Tests
         }
 
         [Fact]
-        public void AssetTrueThrowsWhenPassingFalse()
+        public void AssertTrueThrowsWhenPassingFalse()
         {
             Action x = () => new FluentAssertionsAssertions().AssertTrue(false);
             x.Should().Throw<Exception>();
         }
 
         [Fact]
-        public void AssetTrueDoesNotThrowWhenPassingTrue()
+        public void AssertTrueDoesNotThrowWhenPassingTrue()
         {
             Action x = () => new FluentAssertionsAssertions().AssertTrue(true);
             x.Should().NotThrow();
         }
 
         [Fact]
-        public void AssetFalseThrowsWhenPassingTrue()
+        public void AssertFalseThrowsWhenPassingTrue()
         {
             Action x = () => new FluentAssertionsAssertions().AssertFalse(true);
             x.Should().Throw<Exception>();
         }
 
         [Fact]
-        public void AssetFalseDoesNotThrowWhenPassingFalse()
+        public void AssertFalseDoesNotThrowWhenPassingFalse()
         {
             Action x = () => new FluentAssertionsAssertions().AssertFalse(false);
             x.Should().NotThrow();
         }
 
         [Fact]
-        public void AssetEqualDoesNotThrowWhenPassingIdenticalObjects()
+        public void AssertEqualDoesNotThrowWhenPassingIdenticalObjects()
         {
             var poes = "Cat";
             Action x = () => new FluentAssertionsAssertions().AssertEqual("TheCat", $"The{poes}" );
@@ -50,7 +50,13 @@ namespace Divverence.Akka.TestKit.FluentAssertions.Tests
         }
 
         [Fact]
-        public void AssetEqualFancyDoesNotThrowWhenPassingDifferentObjectsButAComparerThatReturnsTrue()
+        public void AssertEqualThrowsWhenPassingDifferentObjects() {
+            Action x = () => new FluentAssertionsAssertions().AssertEqual("cat", "dog");
+            x.Should().Throw<Exception>();
+        }
+
+        [Fact]
+        public void AssertEqualFancyDoesNotThrowWhenPassingDifferentObjectsButAComparerThatReturnsTrue()
         {
             Action x = () =>
                 new FluentAssertionsAssertions().AssertEqual("Cat", "cat", (_, __) => _.Equals(__, StringComparison.InvariantCultureIgnoreCase));
@@ -58,7 +64,7 @@ namespace Divverence.Akka.TestKit.FluentAssertions.Tests
         }
 
         [Fact]
-        public void AssetEqualFancyThrowsWhenPassingIdenticalObjectsButAComparerThatReturnsFalse()
+        public void AssertEqualFancyThrowsWhenPassingIdenticalObjectsButAComparerThatReturnsFalse()
         {
             Action x = () =>
                 new FluentAssertionsAssertions().AssertEqual("Cat", "Cat", (_, __) => false);
